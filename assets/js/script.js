@@ -98,45 +98,32 @@ function displayMessage() {
 
 //countdown();
 
-var container = document.querySelector(".container");
-
-container.addEventListener("click", function(event) {
-  var element = event.target;
-
-  if (element.matches(".option")) {
-    var state = element.getAttribute("data-state");
-
-    // Use an if statement to conditionally render the number on the card
-    if (state === "hidden") {
-      // If the card is clicked while the state is "hidden", we set .textContent to the number 
-      element.textContent = element.dataset.number;
-      // Using the dataset property, we change the state to visible because the user can now see the number
-      element.dataset.state = "visible";
-   
-    } else {
-      // 'Hide' the number by setting .textContent to an empty string
-      element.textContent= "";
-      // Use .setAttribute() method
-      element.setAttribute("data-state", "hidden")
-     
-    }  
-  }
-  
-});
-
 var startornot = document.querySelector(".startornot");
 var startbutton = startornot.querySelector(".startbutton");
-var questions = [
-    "1+1=?",
-    "In which state is UC Berkeley located?",
-    "What is the most commonly spoken language in the United States?"
-];
-
-startbutton.addEventListener("click", function() {
-    countdown();
-
-});
 
 var index = 0;
 var currentQues;
 
+startbutton.addEventListener("click", function() {
+    countdown();
+    startbutton.style.display = 'none';
+
+    const ques = document.getElementsByClassName('Ques');
+    ques.style.display = 'block';
+
+    const changeQ = document.querySelector("#QuizQ");
+
+    changeQ.textContent = "Question#1: 1+1=?";
+
+});
+
+const btn = document.getElementById('btn');
+
+btn.addEventListener('click', () => {
+  // 👇️ hide button
+  btn.style.display = 'none';
+
+  // 👇️ show div
+  const box = document.getElementById('box');
+  box.style.display = 'block';
+});
