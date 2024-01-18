@@ -20,38 +20,51 @@
           Start the quiz.
         </button>
       </div>
-      <h2>Question: 1+1=?</h2>
-      <h2>Select from the options below.</h2>
-      <div class="option" data-number="1" data-state="hidden">hi</div>
-      <div class="option" data-number="2" data-state="hidden">2</div>
-      <div class="option" data-number="3" data-state="hidden">idk</div>
-      <div class="option" data-number="4" data-state="hidden">3.14</div>
-      <div class="option" data-number="5" data-state="hidden">90</div>
-      <div class="option" data-number="6" data-state="hidden">Red</div>
+      <h2 id="QuizQ">Click the start button to start the quiz.</h2>
+      <div>
+        <h2>Select from the options below.</h2>
+        <div class="btn-group">
+          <button>2</button>
+          <button>3.14</button>
+          <button>1008</button>
+        </div>
+      </div>
+      
     </div>
     
     <div class="clearfix">
       <div class="card">
-        <h2>Sign Up</h2>
+        <h2>All Done.</h2>
+        <p>Your score is 22.</p>
         <form method="POST">
           <div class="input-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="janedoe@mail.com" />
+            <label for="email">Your Initials: (Please Enter)</label>
+            <input type="text" name="email" id="email" placeholder="EL" />
           </div>
-          <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="supersecure123" />
-          </div>
+          
           <div id="msg"></div>
-          <button id="sign-up">Sign Up</button>
+          <button id="sign-up">Submit</button>
         </form>
       </div>
       <div class="card">
-        <h2>Last Registered User:</h2>
-        <p><strong>Email:</strong> <span id="user-email"></span></p>
-        <p><strong>Password:</strong> <span id="user-password"></span></p>
+        <h2>High Scores</h2>
+        <p><strong>1. </strong> <span id="user-email"></span></p>
+        <p><strong>2. </strong> <span id="user-password"></span></p>
       </div>
     </div>
+
+    <div
+      id="box"
+      style="
+        height: 100px;
+        width: 100px;
+        background-color: salmon;
+        display: none;
+      "
+    >
+      Box
+    </div>
+    <button id="btn">Click me</button>
     
     <script src="./assets/js/script.js"></script>
   </body>

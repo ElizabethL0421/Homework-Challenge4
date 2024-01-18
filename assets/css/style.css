@@ -12,11 +12,18 @@ body {
 
 .timer {
     position: absolute;
-    right: 0;
+    right: 50px;
     top: 100px;
     display: block;
     color: #e6252c;
+    font-size: 10px;
 } 
+
+.startornot {
+    position: absolute;
+    right: 50px;
+    top: 200px;
+}
 
 h2 {
   font-size: 3em;
@@ -83,17 +90,35 @@ input:hover {
 .option {
     display: block;
     float: left;
-    width: 31%;
-    height: 200px;
+    width: 200px;
+    height: 100px;
     margin: 1%;
     cursor: pointer;
     object-fit: cover;
     border-radius: 8px;
     background-color: #093145;
     text-align: center;
-    line-height: 200px;
-    font-size: 150px;
+    line-height: 100px;
+    font-size: 50px;
     color: whitesmoke;
+}
+
+.btn-group button {
+    float: left;
+    margin: 1%;
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+  
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+  
+  /* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #5e83c9;
 }
 
 .card {
